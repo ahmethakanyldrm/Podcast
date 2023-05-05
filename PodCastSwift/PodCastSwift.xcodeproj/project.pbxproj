@@ -13,6 +13,9 @@
 		1C94A01F2A0525FF0020970C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C94A01E2A0525FF0020970C /* Assets.xcassets */; };
 		1C94A0222A0525FF0020970C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C94A0202A0525FF0020970C /* LaunchScreen.storyboard */; };
 		1C94A02C2A0527DB0020970C /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A02B2A0527DB0020970C /* MainTabbarController.swift */; };
+		1C94A02E2A0528660020970C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A02D2A0528660020970C /* FavoriteViewController.swift */; };
+		1C94A0302A05288D0020970C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A02F2A05288D0020970C /* SearchViewController.swift */; };
+		1C94A0322A05289C0020970C /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A0312A05289C0020970C /* DownloadsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1C94A0212A0525FF0020970C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C94A0232A0525FF0020970C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C94A02B2A0527DB0020970C /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		1C94A02D2A0528660020970C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1C94A02F2A05288D0020970C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1C94A0312A05289C0020970C /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 			isa = PBXGroup;
 			children = (
 				1C94A02B2A0527DB0020970C /* MainTabbarController.swift */,
+				1C94A02D2A0528660020970C /* FavoriteViewController.swift */,
+				1C94A02F2A05288D0020970C /* SearchViewController.swift */,
+				1C94A0312A05289C0020970C /* DownloadsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C94A0302A05288D0020970C /* SearchViewController.swift in Sources */,
 				1C94A0162A0525FD0020970C /* AppDelegate.swift in Sources */,
+				1C94A0322A05289C0020970C /* DownloadsViewController.swift in Sources */,
 				1C94A02C2A0527DB0020970C /* MainTabbarController.swift in Sources */,
+				1C94A02E2A0528660020970C /* FavoriteViewController.swift in Sources */,
 				1C94A0182A0525FD0020970C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Files/Info.plist;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -287,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Files/Info.plist;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -307,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54M6VWH583;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PodCastSwift/Info.plist;
+				INFOPLIST_FILE = PodCastSwift/Files/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -335,7 +347,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 54M6VWH583;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PodCastSwift/Info.plist;
+				INFOPLIST_FILE = PodCastSwift/Files/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
