@@ -20,6 +20,7 @@
 		1CF4DB8A2A0531C600411EF7 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4DB892A0531C600411EF7 /* SearchCell.swift */; };
 		1CF4DB8D2A053FCB00411EF7 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4DB8C2A053FCB00411EF7 /* Search.swift */; };
 		1CF4DB902A05406600411EF7 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF4DB8F2A05406600411EF7 /* SearchService.swift */; };
+		1CF4DB932A05435200411EF7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF4DB922A05435200411EF7 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF4DB932A05435200411EF7 /* Kingfisher in Frameworks */,
 				1C94A0352A052FD30020970C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +147,7 @@
 			name = PodCastSwift;
 			packageProductDependencies = (
 				1C94A0342A052FD30020970C /* Alamofire */,
+				1CF4DB922A05435200411EF7 /* Kingfisher */,
 			);
 			productName = PodCastSwift;
 			productReference = 1C94A0122A0525FD0020970C /* PodCastSwift.app */;
@@ -176,6 +179,7 @@
 			mainGroup = 1C94A0092A0525FD0020970C;
 			packageReferences = (
 				1C94A0332A052FD30020970C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1CF4DB912A05435100411EF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1C94A0132A0525FD0020970C /* Products */;
 			projectDirPath = "";
@@ -442,6 +446,14 @@
 				kind = branch;
 			};
 		};
+		1CF4DB912A05435100411EF7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -449,6 +461,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C94A0332A052FD30020970C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		1CF4DB922A05435200411EF7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF4DB912A05435100411EF7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

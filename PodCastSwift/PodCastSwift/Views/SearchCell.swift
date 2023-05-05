@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchCell: UITableViewCell {
     // MARK: - Properties
+    
+    var result: Podcast? {
+        didSet {
+            configure()
+        }
+    }
     
     private let photoImageView: UIImageView = {
        
@@ -36,8 +43,8 @@ class SearchCell: UITableViewCell {
     private let trackCount: UILabel = {
        let lbl = UILabel()
         lbl.text = "Track Count"
-        lbl.textColor = .lightGray
-        lbl.font = UIFont.systemFont(ofSize: 14)
+        lbl.textColor = .gray
+        lbl.font = UIFont.boldSystemFont(ofSize: 14)
         return lbl
     }()
     
@@ -84,5 +91,13 @@ extension SearchCell {
             
         ])
         
+    }
+    
+    private func configure() {
+        guard let result = self.result else {return}
+        trackName.text = result.trackName
+        trackCount.text = "\(result.trackCount ?? 0)"
+        artistName.text = result.artistName
+        photoImageView.kf.setImage(with: URL(string: result.artworkUrl600 ?? ""))
     }
 }
