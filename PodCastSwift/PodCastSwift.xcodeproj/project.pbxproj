@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1A20562A05AEDA00B795A9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */; };
 		1C94A0162A0525FD0020970C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A0152A0525FD0020970C /* AppDelegate.swift */; };
 		1C94A0182A0525FD0020970C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A0172A0525FD0020970C /* SceneDelegate.swift */; };
 		1C94A01D2A0525FD0020970C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C94A01B2A0525FD0020970C /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		1C94A0122A0525FD0020970C /* PodCastSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodCastSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C94A0152A0525FD0020970C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C94A0172A0525FD0020970C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C1A20542A05AEC800B795A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1C94A0092A0525FD0020970C = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		1C94A0142A0525FD0020970C /* PodCastSwift */ = {
 			isa = PBXGroup;
 			children = (
+				1C1A20542A05AEC800B795A9 /* ViewModel */,
 				1CF4DB8E2A05405600411EF7 /* Services */,
 				1CF4DB8B2A053FB800411EF7 /* Models */,
 				1C94A0362A05318B0020970C /* Views */,
@@ -214,6 +225,7 @@
 				1C94A0322A05289C0020970C /* DownloadsViewController.swift in Sources */,
 				1CF4DB8A2A0531C600411EF7 /* SearchCell.swift in Sources */,
 				1C94A02C2A0527DB0020970C /* MainTabbarController.swift in Sources */,
+				1C1A20562A05AEDA00B795A9 /* SearchViewModel.swift in Sources */,
 				1CF4DB8D2A053FCB00411EF7 /* Search.swift in Sources */,
 				1C94A02E2A0528660020970C /* FavoriteViewController.swift in Sources */,
 				1C94A0182A0525FD0020970C /* SceneDelegate.swift in Sources */,

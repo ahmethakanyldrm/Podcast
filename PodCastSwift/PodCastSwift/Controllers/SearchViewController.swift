@@ -42,6 +42,22 @@ extension SearchViewController{
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension SearchViewController {
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.text = "Search Start..."
+        label.textAlignment = .center
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.textColor = .systemPurple
+        return label
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return self.searchResult.count == 0 ? 80 : 0
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension SearchViewController {
@@ -62,5 +78,9 @@ extension SearchViewController: UISearchBarDelegate {
         SearchService.fetchData(searchText: searchText) { result in
             self.searchResult = result
         }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchResult = []
     }
 }
