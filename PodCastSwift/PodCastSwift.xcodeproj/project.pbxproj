@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1C1A20562A05AEDA00B795A9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */; };
+		1C7C03AC2A06794500C30B3C /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */; };
+		1C7C03AE2A067AA000C30B3C /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03AD2A067AA000C30B3C /* EpisodeCell.swift */; };
+		1C7C03B02A067C4100C30B3C /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03AF2A067C4100C30B3C /* Podcast.swift */; };
+		1C7C03B32A067DF400C30B3C /* FeedKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7C03B22A067DF400C30B3C /* FeedKit */; };
+		1C7C03B52A067E0300C30B3C /* EpisodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03B42A067E0300C30B3C /* EpisodeService.swift */; };
 		1C94A0162A0525FD0020970C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A0152A0525FD0020970C /* AppDelegate.swift */; };
 		1C94A0182A0525FD0020970C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94A0172A0525FD0020970C /* SceneDelegate.swift */; };
 		1C94A01D2A0525FD0020970C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C94A01B2A0525FD0020970C /* Main.storyboard */; };
@@ -26,6 +31,10 @@
 
 /* Begin PBXFileReference section */
 		1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		1C7C03AD2A067AA000C30B3C /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		1C7C03AF2A067C4100C30B3C /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		1C7C03B42A067E0300C30B3C /* EpisodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeService.swift; sourceTree = "<group>"; };
 		1C94A0122A0525FD0020970C /* PodCastSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PodCastSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C94A0152A0525FD0020970C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C94A0172A0525FD0020970C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7C03B32A067DF400C30B3C /* FeedKit in Frameworks */,
 				1CF4DB932A05435200411EF7 /* Kingfisher in Frameworks */,
 				1C94A0352A052FD30020970C /* Alamofire in Frameworks */,
 			);
@@ -112,6 +122,7 @@
 				1C94A02D2A0528660020970C /* FavoriteViewController.swift */,
 				1C94A02F2A05288D0020970C /* SearchViewController.swift */,
 				1C94A0312A05289C0020970C /* DownloadsViewController.swift */,
+				1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				1CF4DB892A0531C600411EF7 /* SearchCell.swift */,
+				1C7C03AD2A067AA000C30B3C /* EpisodeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				1CF4DB8C2A053FCB00411EF7 /* Search.swift */,
+				1C7C03AF2A067C4100C30B3C /* Podcast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				1CF4DB8F2A05406600411EF7 /* SearchService.swift */,
+				1C7C03B42A067E0300C30B3C /* EpisodeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -159,6 +173,7 @@
 			packageProductDependencies = (
 				1C94A0342A052FD30020970C /* Alamofire */,
 				1CF4DB922A05435200411EF7 /* Kingfisher */,
+				1C7C03B22A067DF400C30B3C /* FeedKit */,
 			);
 			productName = PodCastSwift;
 			productReference = 1C94A0122A0525FD0020970C /* PodCastSwift.app */;
@@ -191,6 +206,7 @@
 			packageReferences = (
 				1C94A0332A052FD30020970C /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1CF4DB912A05435100411EF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1C7C03B12A067DF400C30B3C /* XCRemoteSwiftPackageReference "FeedKit" */,
 			);
 			productRefGroup = 1C94A0132A0525FD0020970C /* Products */;
 			projectDirPath = "";
@@ -222,11 +238,15 @@
 				1CF4DB902A05406600411EF7 /* SearchService.swift in Sources */,
 				1C94A0302A05288D0020970C /* SearchViewController.swift in Sources */,
 				1C94A0162A0525FD0020970C /* AppDelegate.swift in Sources */,
+				1C7C03B52A067E0300C30B3C /* EpisodeService.swift in Sources */,
 				1C94A0322A05289C0020970C /* DownloadsViewController.swift in Sources */,
 				1CF4DB8A2A0531C600411EF7 /* SearchCell.swift in Sources */,
+				1C7C03AE2A067AA000C30B3C /* EpisodeCell.swift in Sources */,
+				1C7C03B02A067C4100C30B3C /* Podcast.swift in Sources */,
 				1C94A02C2A0527DB0020970C /* MainTabbarController.swift in Sources */,
 				1C1A20562A05AEDA00B795A9 /* SearchViewModel.swift in Sources */,
 				1CF4DB8D2A053FCB00411EF7 /* Search.swift in Sources */,
+				1C7C03AC2A06794500C30B3C /* EpisodeViewController.swift in Sources */,
 				1C94A02E2A0528660020970C /* FavoriteViewController.swift in Sources */,
 				1C94A0182A0525FD0020970C /* SceneDelegate.swift in Sources */,
 			);
@@ -450,6 +470,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1C7C03B12A067DF400C30B3C /* XCRemoteSwiftPackageReference "FeedKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nmdias/FeedKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		1C94A0332A052FD30020970C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -469,6 +497,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1C7C03B22A067DF400C30B3C /* FeedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C7C03B12A067DF400C30B3C /* XCRemoteSwiftPackageReference "FeedKit" */;
+			productName = FeedKit;
+		};
 		1C94A0342A052FD30020970C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C94A0332A052FD30020970C /* XCRemoteSwiftPackageReference "Alamofire" */;

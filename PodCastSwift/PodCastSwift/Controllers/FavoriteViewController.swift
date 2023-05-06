@@ -21,7 +21,7 @@ class FavoriteViewController: UIViewController {
 
 extension FavoriteViewController{
     private func style() {
-        view.backgroundColor = .blue
+        
     }
     
     private func layout(){

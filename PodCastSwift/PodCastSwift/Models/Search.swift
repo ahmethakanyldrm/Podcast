@@ -12,10 +12,4 @@ struct Search: Decodable {
     let results: [Podcast]
 }
 
-struct Podcast: Decodable{
-    var trackName: String?
-    var artistName: String?
-    var trackCount: Int?
-    var artworkUrl600: String?
-    var feedUrl: String?
-}
+

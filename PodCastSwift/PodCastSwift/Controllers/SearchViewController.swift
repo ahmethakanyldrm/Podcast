@@ -56,6 +56,13 @@ extension SearchViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return self.searchResult.count == 0 ? 80 : 0
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let podcast = self.searchResult[indexPath.row]
+        let controller = EpisodeViewController(podcast: podcast)
+        self.navigationController?.pushViewController(controller, animated: true)
+        
+    }
 }
 
 // MARK: - UITableViewDataSource
