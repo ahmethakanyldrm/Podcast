@@ -21,8 +21,7 @@ class SearchCell: UITableViewCell {
        
         let img = UIImageView()
         img.backgroundColor = .systemPurple
-        img.clipsToBounds = true
-        img.contentMode = .scaleAspectFill
+        img.customMode()
         return img
     }()
     
