@@ -8,13 +8,14 @@
 import Foundation
 import FeedKit
 
-struct Episode {
+struct Episode : Codable{
     let title: String
     let pubDate: Date
     let description: String
     let imageUrl: String
     let streamUrl: String
     let author:String
+    var fileUrl: String?
     
     init(value: RSSFeedItem) {
         self.author = value.iTunes?.iTunesAuthor?.description ?? value.author ?? ""

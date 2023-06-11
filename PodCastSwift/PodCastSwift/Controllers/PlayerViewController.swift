@@ -222,17 +222,32 @@ extension PlayerViewController {
         }
     }
     
-    /// startPlay Fonksiyonu
+    /// playPodcast Fonksiyonu
     /// Bu fonksiyon Podcastin oynatılması, play butonunun görselinin pause moduna geçmesi ve süresinin başlatılması işlemini sağlar işlemini yapar
     ///  Ek olarak başlangıç ses düzeyini 40 olarak ayarlar
-    private func startPlay() {
-        guard let url = URL(string: episode.streamUrl) else {return}
+    private func playPodcast(url: URL){
         let playerItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: playerItem)
         player.play()
         self.goPlayButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
         self.volumeSliderView.value = 40
         updateTimeLabel()
+    }
+    
+   /// startPlay fonksiyonu
+  ///  oynatılacak podcastin indirilip indirilmediğini kontrol eder.
+ ///   indirildiyse internetsiz ortamda localden oynatır indirilmediyse internet ortamında oynatır
+    private func startPlay() {
+        
+        if episode.fileUrl != nil {
+            guard let url = URL(string: episode.fileUrl ?? "") else {return}
+            guard var fileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else{return}
+            
+            fileUrl.append(path: url.lastPathComponent)
+            playPodcast(url: fileUrl)
+        }
+        guard let url = URL(string: episode.streamUrl) else {return}
+        playPodcast(url: url)
     }
     
     /// Style Fonksiyonu

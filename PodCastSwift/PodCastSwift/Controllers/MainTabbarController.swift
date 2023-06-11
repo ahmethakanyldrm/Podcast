@@ -27,6 +27,7 @@ extension MainTabbarController {
             createViewController(rootViewController: DownloadsViewController(), title: "Downloads", imageName: "arrow.down.to.line")
             
         ]
+        tabBar.tintColor = .systemPurple
     }
     
     private func createViewController(rootViewController: UIViewController, title: String, imageName: String) -> UINavigationController {
