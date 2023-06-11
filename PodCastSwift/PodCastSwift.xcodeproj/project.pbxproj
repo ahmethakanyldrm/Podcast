@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C051E652A083D5600D1A27D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C051E642A083D5600D1A27D /* PlayerViewController.swift */; };
+		1C051E672A08460D00D1A27D /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C051E662A08460D00D1A27D /* UIButton+Ext.swift */; };
+		1C10292B2A34DE260006D2BD /* CMTime+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C10292A2A34DE260006D2BD /* CMTime+Ext.swift */; };
 		1C1A20562A05AEDA00B795A9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */; };
 		1C7C03AC2A06794500C30B3C /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */; };
 		1C7C03AE2A067AA000C30B3C /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7C03AD2A067AA000C30B3C /* EpisodeCell.swift */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C051E642A083D5600D1A27D /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		1C051E662A08460D00D1A27D /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
+		1C10292A2A34DE260006D2BD /* CMTime+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime+Ext.swift"; sourceTree = "<group>"; };
 		1C1A20552A05AEDA00B795A9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		1C7C03AD2A067AA000C30B3C /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				1C7C03B72A0682B500C30B3C /* UIImageView+Ext.swift */,
+				1C051E662A08460D00D1A27D /* UIButton+Ext.swift */,
+				1C10292A2A34DE260006D2BD /* CMTime+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 				1C94A02F2A05288D0020970C /* SearchViewController.swift */,
 				1C94A0312A05289C0020970C /* DownloadsViewController.swift */,
 				1C7C03AB2A06794500C30B3C /* EpisodeViewController.swift */,
+				1C051E642A083D5600D1A27D /* PlayerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,9 +266,12 @@
 				1C94A0302A05288D0020970C /* SearchViewController.swift in Sources */,
 				1C94A0162A0525FD0020970C /* AppDelegate.swift in Sources */,
 				1C7C03B52A067E0300C30B3C /* EpisodeService.swift in Sources */,
+				1C051E652A083D5600D1A27D /* PlayerViewController.swift in Sources */,
 				1C9048DA2A068A56007EABD7 /* EpisodeViewModel.swift in Sources */,
 				1C94A0322A05289C0020970C /* DownloadsViewController.swift in Sources */,
+				1C051E672A08460D00D1A27D /* UIButton+Ext.swift in Sources */,
 				1CF4DB8A2A0531C600411EF7 /* SearchCell.swift in Sources */,
+				1C10292B2A34DE260006D2BD /* CMTime+Ext.swift in Sources */,
 				1C7C03B82A0682B500C30B3C /* UIImageView+Ext.swift in Sources */,
 				1C7C03AE2A067AA000C30B3C /* EpisodeCell.swift in Sources */,
 				1C7C03B02A067C4100C30B3C /* Podcast.swift in Sources */,

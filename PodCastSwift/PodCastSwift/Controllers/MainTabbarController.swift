@@ -23,8 +23,8 @@ extension MainTabbarController {
     private func setup() {
         viewControllers = [
             
-            createViewController(rootViewController: FavoriteViewController(), title: "Favorites", imageName: "play.circle.fill"),
             createViewController(rootViewController: SearchViewController(), title: "Search", imageName: "magnifyingglass"),
+            createViewController(rootViewController: FavoriteViewController(), title: "Favorites", imageName: "play.circle.fill"),
             createViewController(rootViewController: DownloadsViewController(), title: "Downloads", imageName: "arrow.down.to.line")
             
         ]
