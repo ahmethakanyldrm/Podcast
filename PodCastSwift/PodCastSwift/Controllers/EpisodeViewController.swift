@@ -7,17 +7,36 @@
 
 import UIKit
 
+
 class EpisodeViewController: UITableViewController {
     
     // MARK: - Properties
+    
     private let reuseIdentifier = "EpisodeCell"
     private var podcast: Podcast
+    
     private var episodeResult : [Episode] = [] {
         didSet {
             self.tableView.reloadData()
         }
     }
     
+    private var isFavorite = false {
+        didSet {
+            navBarItemSetup()
+        }
+    }
+    
+    private var resultCoreDataItems: [PodcastCoreData] = [] {
+        didSet {
+            let isValue = resultCoreDataItems.contains(where: {$0.feedUrl == self.podcast.feedUrl})
+            if isValue {
+                isFavorite = true
+            }else {
+                isFavorite = false
+            }
+        }
+    }
     // MARK: - LifeCycles
      init(podcast: Podcast) {
          self.podcast = podcast
@@ -34,6 +53,7 @@ class EpisodeViewController: UITableViewController {
     }
 }
 
+// MARK: - Service
 extension EpisodeViewController {
     
     fileprivate func fetchData() {
@@ -48,12 +68,68 @@ extension EpisodeViewController {
 
 // MARK: - Helper
 extension EpisodeViewController {
+    
+    /// addCoreData fonksiyonu
+    ///  Bu fonksiyon Core dataya veri kaydetmeyi sağlar
+    private func addCoreData() {
+        let model = PodcastCoreData(context: context)
+        CoreDataController.addCoreData(model: model, podcast: self.podcast)
+        isFavorite = true
+        let window = UIApplication.shared.connectedScenes.first as! UIWindowScene
+        let mainTabController = window.keyWindow?.rootViewController as! MainTabbarController
+        mainTabController.viewControllers?[0].tabBarItem.badgeValue = "New"
+    }
+    
+    /// fetchCoreData fonksiyonu
+    ///  Bu fonksiyon Core datadan veri çekmeyi sağlar
+    private func fetchCoreData() {
+        let fetchRequest = PodcastCoreData.fetchRequest()
+        CoreDataController.fetchCoreData(fetchRequest: fetchRequest) { result in
+            self.resultCoreDataItems = result
+        }
+    }
+    
+    /// deleteCoreData fonksiyonu
+    ///  Bu fonksiyon Core datadan veri silmeyi sağlar
+    private func deleteCoreData() {
+        CoreDataController.deleteCoreData(array: resultCoreDataItems, podcast: podcast)
+        self.isFavorite = false
+    }
+    
+    
+    
+    
+    private func navBarItemSetup() {
+        
+        if isFavorite {
+            let navRightItem = UIBarButtonItem(image: UIImage(systemName: "heart.fill")?.withTintColor(.red, renderingMode: .alwaysOriginal), style: .done, target: self, action: #selector(handleFavoriButton ))
+            self.navigationItem.rightBarButtonItem = navRightItem
+        }else {
+            let navRightItem = UIBarButtonItem(image: UIImage(systemName: "heart")?.withTintColor(.red, renderingMode: .alwaysOriginal), style: .done, target: self, action: #selector(handleFavoriButton ))
+            self.navigationItem.rightBarButtonItem = navRightItem
+        }
+        
+       
+    }
+    
     private func setup(){
         self.navigationItem.title = podcast.trackName
         tableView.register(EpisodeCell.self, forCellReuseIdentifier: reuseIdentifier)
+        navBarItemSetup()
+        fetchCoreData()
     }
 }
 
+// MARK: - Selector
+extension EpisodeViewController {
+    @objc private func handleFavoriButton() {
+        if isFavorite {
+            deleteCoreData()
+        }else {
+            addCoreData()
+        }
+    }
+}
 // MARK: - UITableViewDataSource
 
 extension EpisodeViewController {

@@ -157,8 +157,6 @@ class PlayerViewController: UIViewController {
 // MARK: - Selector
 extension PlayerViewController {
     
-    /// Play Button Fonksiyonu
-    ///  Bu fonksiyon Podcasti oynatıp durdurma işlemini sağlar
     @objc private func handleGoPlayButton(_ sender: UIButton) {
         if player.timeControlStatus == .paused {
             player.play()
@@ -169,6 +167,7 @@ extension PlayerViewController {
         }
     }
     
+   
     @objc private func handleCloseButton(_ sender: UIButton) {
         player.pause()
         self.dismiss(animated: true)
@@ -193,12 +192,17 @@ extension PlayerViewController {
 
 extension PlayerViewController {
     
+    /// updateForward Fonksiyonu
+    ///  Bu fonksiyon Podcasti ileri veya geri sarma işlemini yapar
     private func updateForward(value: Int64) {
         let exampleTime = CMTime(value: value, timescale: 1)
         let seekTime = CMTimeAdd(player.currentTime(), exampleTime)
         player.seek(to: seekTime)
 
     }
+    
+    /// updateSlider Fonksiyonu
+    ///  Bu fonksiyon Podcastin süresi ilerledikçe veya geri sarıldıkça slider güncelleme işlemini yapar
     
     fileprivate func updateSlider() {
         let currentTimeSecond = CMTimeGetSeconds(player.currentTime())
@@ -207,6 +211,7 @@ extension PlayerViewController {
         self.sliderView.value = Float(resultSecondTime)
     }
     
+   
     fileprivate func updateTimeLabel() {
         let interval = CMTimeMake(value: 1, timescale: 2)
         player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { time in
@@ -217,6 +222,9 @@ extension PlayerViewController {
         }
     }
     
+    /// startPlay Fonksiyonu
+    /// Bu fonksiyon Podcastin oynatılması, play butonunun görselinin pause moduna geçmesi ve süresinin başlatılması işlemini sağlar işlemini yapar
+    ///  Ek olarak başlangıç ses düzeyini 40 olarak ayarlar
     private func startPlay() {
         guard let url = URL(string: episode.streamUrl) else {return}
         let playerItem = AVPlayerItem(url: url)
