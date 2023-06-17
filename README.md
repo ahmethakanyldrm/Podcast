@@ -40,24 +40,24 @@ $ $ git clone https://github.com/ahmethakanyldrm/PodcastSwift
 
 ## Play Screen ##
 <p align="center">
-  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/Podcast/blob/main/images/playScreen.png"> 
+  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/playScreen.png"> 
 </p>
 
 ## Favorites Screen ##
 <p align="center">
-  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/Podcast/blob/main/images/favorites.png">
-   <img width="300" height="650" src="https://github.com/ahmethakanyldrm/NetflixCloneMvvm/blob/main/images/favoritesList.png">  
+  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/favorites.png">
+   <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/favoritesList.png">  
 </p>
 
 ## Search Screen ##
 <p align="center">
-  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/NetflixCloneMvvm/blob/main/images/searchResult.png">
-   <img width="300" height="650" src="https://github.com/ahmethakanyldrm/NetflixCloneMvvm/blob/main/images/searched.png">
+  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/searchResult.png">
+   <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/searched.png">
 </p>
 
 ## Downloads & Details ##
 <p align="center">
-  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/NetflixCloneMvvm/blob/main/images/download.png">
+  <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/download.png">
    
 </p>
 
