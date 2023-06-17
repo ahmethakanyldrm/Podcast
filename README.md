@@ -55,7 +55,7 @@ $ $ git clone https://github.com/ahmethakanyldrm/PodcastSwift
    <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/searched.png">
 </p>
 
-## Downloads & Details ##
+## Downloads Screen ##
 <p align="center">
   <img width="300" height="650" src="https://github.com/ahmethakanyldrm/PodcastSwift/blob/main/images/download.png">
    
